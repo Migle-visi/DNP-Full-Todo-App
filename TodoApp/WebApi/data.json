@@ -1,0 +1,85 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "UserName": "Chloe"
+    },
+    {
+      "Id": 2,
+      "UserName": "Trixie"
+    },
+    {
+      "Id": 3,
+      "UserName": "Username1"
+    },
+    {
+      "Id": 4,
+      "UserName": "BlazorIsCool"
+    }
+  ],
+  "Todos": [
+    {
+      "Id": 4,
+      "Owner": {
+        "Id": 1,
+        "UserName": "Chloe"
+      },
+      "Title": "Drink coffee",
+      "IsCompleted": true
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Id": 2,
+        "UserName": "Trixie"
+      },
+      "Title": "Sleep all day",
+      "IsCompleted": false
+    },
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 1,
+        "UserName": "Chloe"
+      },
+      "Title": "Chew the rug",
+      "IsCompleted": true
+    },
+    {
+      "Id": 5,
+      "Owner": {
+        "Id": 1,
+        "UserName": "Chloe"
+      },
+      "Title": "Meow in the kitchen",
+      "IsCompleted": false
+    },
+    {
+      "Id": 6,
+      "Owner": {
+        "Id": 3,
+        "UserName": "Username1"
+      },
+      "Title": "Eat lunch",
+      "IsCompleted": false
+    },
+    {
+      "Id": 7,
+      "Owner": {
+        "Id": 3,
+        "UserName": "Username1"
+      },
+      "Title": "Scroll instagram",
+      "IsCompleted": false
+    },
+    {
+      "Id": 8,
+      "Owner": {
+        "Id": 3,
+        "UserName": "Username1"
+      },
+      "Title": "Go to uni",
+      "IsCompleted": false
+    }
+  ]
+}
