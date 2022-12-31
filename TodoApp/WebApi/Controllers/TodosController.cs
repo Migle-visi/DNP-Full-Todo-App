@@ -79,6 +79,21 @@ public class TodosController : ControllerBase
         }
     }
     
+    [HttpGet("user/{id:int}")]
+    public async Task<ActionResult<IEnumerable<Todo>>> GetPostsByUserIdAsync([FromRoute] int id)
+    {
+        try
+        {
+            IEnumerable<Todo> todos = await todoLogic.GetTodosByUserIdAsync(id);
+            return Ok(todos);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    
     [HttpGet("{id:int}")]
     public async Task<ActionResult<TodoBasicDto>> GetById([FromRoute] int id)
     {

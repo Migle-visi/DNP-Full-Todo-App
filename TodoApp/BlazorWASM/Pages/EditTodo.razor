@@ -49,7 +49,7 @@
 
 @code {
     [Parameter]
-    public int Id { get; set; }
+    public int TodoId { get; set; }
 
     private TodoUpdateDto dto = null!;
     private string msg = "";
@@ -61,10 +61,10 @@
         try
         {
             users = await userService.GetUsers();
-            TodoBasicDto todoData = await todoService.GetByIdAsync(Id);
+            TodoBasicDto todoData = await todoService.GetByIdAsync(TodoId);
             User currentlyAssigned = users.First(user => user.UserName.Equals(todoData.OwnerName));
 
-            dto = new(Id)
+            dto = new(TodoId)
             {
                 Title = todoData.Title,
                 OwnerId = currentlyAssigned.Id

@@ -1,0 +1,65 @@
+﻿@page "/ReviewAll"
+@using Domain.Models
+@using HttpClients.ClientInterfaces
+@inject ITodoService todoService
+@inject IUserService userService
+@using Domain.DTOs
+
+<h3>Here is a review of all user tasks</h3>
+
+@foreach (User user in allUsers)
+    {
+        <h6>@user.UserName has these tasks: </h6>
+                                            
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Todo ID</th>
+                <th>Owner ID</th>
+                <th>Title</th>
+                <th>Completed?</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (Todo todo in allTodos)
+            {
+                if (todo.Owner.Id.Equals(user.Id))
+                {
+                    <tr>
+                        <td>@todo.Id</td>
+                        <td>@todo.Owner.Id</td>
+                        <td>@todo.Title</td>
+                        <td>@todo.IsCompleted</td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    }
+
+@code 
+{
+    
+    private IEnumerable<Todo>? allTodos = new List<Todo>();
+    private IEnumerable<User>? allUsers = new List<User>();
+
+    private Todo todo;
+    
+    private string msg = "";
+    
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "";
+        try
+        {
+            allUsers = await userService.GetUsers();
+            allTodos = await todoService.GetAsync(null,null,null,null);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+}

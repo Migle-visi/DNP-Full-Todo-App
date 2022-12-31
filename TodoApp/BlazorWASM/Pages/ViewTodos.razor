@@ -3,6 +3,7 @@
 @using Domain.DTOs
 @using HttpClients.ClientInterfaces
 @inject ITodoService todoService
+@inject IUserService userService
 @using BlazorWASM.Pages.UIComponents
 @inject NavigationManager navMgr
 
@@ -41,48 +42,51 @@
     <button @onclick="LoadTodos">Load</button>
 </div>
 
-@if (todos == null)
+@if (allTodos == null)
 {
+    <p>Null pointer</p>
 }
-else if (!todos.Any())
+else if (!allTodos.Any())
 {
-    <p>No Todos to display</p>
+    <p>Nothing to display</p>
 }
 else
 {
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Todo ID</th>
-            <th>Owner ID</th>
-            <th>Title</th>
-            <th>Completed?</th>
-            <th>Edit</th>
-            <th>Delete?</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in todos)
-        {
+    
+        <table class="table">
+            <thead>
             <tr>
-                <td>@item.Id</td>
-                <td>@item.Owner.UserName</td>
-                <td>@item.Title</td>
-                <td>
-                    <FancyCheckBox IsCompleted="@item.IsCompleted" OnChange="@((status) => CompleteTodo(item, status))"/>
-                </td>
-                <td>
-                    <img src="icons/edit.gif" class="funnel" @onclick="@(() => navMgr.NavigateTo($"/EditTodo/{item.Id}"))"/>
-                </td>
-                <td>
-                    <label @onclick="@(() => RemoveTodo(item.Id))" style="cursor:pointer; color: red; font-weight: bold">
-                        &#x2717;
-                    </label>
-                </td>
+                <th>Todo ID</th>
+                <th>Owner ID</th>
+                <th>Title</th>
+                <th>Completed?</th>
+                <th>Edit</th>
+                <th>Delete?</th>
             </tr>
-        }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            @foreach (Todo todo in allTodos)
+            {
+                <tr>
+                    <td>@todo.Id</td>
+                    <td>@todo.Owner.UserName</td>
+                    <td>@todo.Title</td>
+                    <td>
+                        <FancyCheckBox IsCompleted="@todo.IsCompleted" OnChange="@((status) => CompleteTodo(todo, status))"/>
+                    </td>
+                    <td>
+                        <img src="icons/edit.gif" class="funnel" @onclick="@(() => navMgr.NavigateTo($"/EditTodo/{todo.Id}"))"/>
+                    </td>
+                    <td>
+                        <label @onclick="@(() => RemoveTodo(todo.Id))" style="cursor:pointer; color: red; font-weight: bold">
+                            &#x2717;
+                        </label>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
 }
 @if (!string.IsNullOrEmpty(msg))
 {
@@ -90,17 +94,20 @@ else
 }
 
 @code {
-    private IEnumerable<Todo>? todos;
+
+    private IEnumerable<Todo>? allTodos = new List<Todo>();
     private string msg = "";
     private bool doShowFilters = false;
 
     private string? usernameFilter;
     private int? userIdFilter;
+    private bool? isCompleted;
     private string? completedStatusFilter;
     private string? titleContainsFilter;
 
     private async Task LoadTodos()
     {
+        msg = "";
         try
         {
             bool? completedFilterValue = null;
@@ -108,7 +115,8 @@ else
             {
                 completedFilterValue = bool.Parse(completedStatusFilter);
             }
-            todos = await todoService.GetAsync(usernameFilter, userIdFilter, completedFilterValue, titleContainsFilter);
+            allTodos = await todoService.GetAsync(usernameFilter, userIdFilter, completedFilterValue, titleContainsFilter);
+            
         }
         catch (Exception e)
         {
@@ -116,6 +124,7 @@ else
             msg = e.Message;
         }
     }
+    
     
     private async Task CompleteTodo(Todo item, bool status)
     {
@@ -142,9 +151,9 @@ else
         {
             await todoService.DeleteAsync(todoId);
         
-            var list = new List<Todo>(todos!);
+            var list = new List<Todo>(allTodos!);
             list.RemoveAll(todo => todo.Id == todoId);
-            todos = list.AsEnumerable();
+            allTodos = list.AsEnumerable();
         }
         catch (Exception e)
         {

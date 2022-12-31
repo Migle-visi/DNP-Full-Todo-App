@@ -10,4 +10,5 @@ public interface ITodoLogic
     Task UpdateAsync(TodoUpdateDto todo);
     Task DeleteAsync(int id);
     Task<TodoBasicDto> GetByIdAsync(int id);
+    Task<IEnumerable<Todo>> GetTodosByUserIdAsync(int id);
 }

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+BrEURpfyi2jO8Df6xwE1Z33yJuXFAvZDigNaFYK4XsPJ2OevxsESrO2oIY1wGAIjNUG+iyRIv+wqdgBgopAOw==",
+  "dgSpecHash": "KnPeuX1x0FbNU70ZhKCQtmD7idSqPSQHl6yvYR0VLWbPM+fhahnzttf0neUQTt6tV6EJigeWXpsCYJfxxjHCwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\migle\\RiderProjects\\TodoApp\\HttpClients\\HttpClients.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\migle\\RiderProjects\\DNP-Full-Todo-App\\TodoApp\\HttpClients\\HttpClients.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
+  ],
   "logs": []
 }

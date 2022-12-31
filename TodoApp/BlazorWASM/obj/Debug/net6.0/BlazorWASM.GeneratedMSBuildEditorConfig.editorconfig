@@ -5,67 +5,69 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = browser
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = true
-build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorWASM
 build_property.RootNamespace = BlazorWASM
-build_property.ProjectDir = C:\Users\migle\RiderProjects\TodoApp\BlazorWASM\
+build_property.ProjectDir = C:\Users\migle\RiderProjects\DNP-Full-Todo-App\TodoApp\BlazorWASM\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\migle\RiderProjects\TodoApp\BlazorWASM
+build_property.MSBuildProjectDirectory = C:\Users\migle\RiderProjects\DNP-Full-Todo-App\TodoApp\BlazorWASM
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/App.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/CreateTodo.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/CreateTodo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlVG9kby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/CreateUser.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/CreateUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/EditTodo.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/EditTodo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRvZG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/Index.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/ViewTodos.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/ReviewAll.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3QWxsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/ViewTodos.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1RvZG9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/ViewUsers.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/ViewUsers.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1VzZXJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Shared/SurveyPrompt.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/_Imports.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/UIComponents/FancyCheckBox.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/UIComponents/FancyCheckBox.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVUlDb21wb25lbnRzXEZhbmN5Q2hlY2tCb3gucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-6xhdtlkuo4
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Pages/UIComponents/Modal.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Pages/UIComponents/Modal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVUlDb21wb25lbnRzXE1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-sp2tgkowl2
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Shared/MainLayout.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-jk00ermrez
 
-[C:/Users/migle/RiderProjects/TodoApp/BlazorWASM/Shared/NavMenu.razor]
+[C:/Users/migle/RiderProjects/DNP-Full-Todo-App/TodoApp/BlazorWASM/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-69rflur3ak

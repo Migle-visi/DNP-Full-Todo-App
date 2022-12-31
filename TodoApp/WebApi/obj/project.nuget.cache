@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "opv1pD9dSCkkvweRZUZZpEH5BbXlZMQ6S1imoApvzXxCcIdvQLYQzgINLBugFZLHdMlWwDxnzY5EaUOAxPR2IA==",
+  "dgSpecHash": "g3w3gWZwrepSX0uyvXP0eGMr3qaky1PxZabA63SqSX2Hzk0xM1Wc9FBXhNItAuO8x1jPqnV+mlyS/7NVp7xi5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\migle\\RiderProjects\\TodoApp\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\migle\\RiderProjects\\DNP-Full-Todo-App\\TodoApp\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\migle\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\migle\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
@@ -37,7 +37,11 @@
     "C:\\Users\\migle\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\migle\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\migle\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\migle\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\migle\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512"
   ],
   "logs": []
 }

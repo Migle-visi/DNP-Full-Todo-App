@@ -113,4 +113,8 @@ public class TodoLogic : ITodoLogic
         return new TodoBasicDto(todo.Id, todo.Owner.UserName, todo.Title, todo.IsCompleted);
     }
 
+    public async Task<IEnumerable<Todo>> GetTodosByUserIdAsync(int id)
+    {
+        return await todoDao.GetTodosByUserIdAsync(id);
+    }
 }

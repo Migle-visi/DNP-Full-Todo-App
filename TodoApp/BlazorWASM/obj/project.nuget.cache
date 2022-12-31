@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v0Wsu8g5xM23lymEiieI0TYwEqhv4VSTEhrPOJaGYkzvgQJLJsbukveD7UMJMAbBD8J3qyhzcX+JhG0KjQ8dZg==",
+  "dgSpecHash": "0XCf5pPpMw0mvxvsZ8OgbBocH5jhxjzyA0aSq/XgRn4hk7wEqntTg2Xaa2XTyy8zlhRH8Et2qr747ZLaNwX7Jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\migle\\RiderProjects\\TodoApp\\BlazorWASM\\BlazorWASM.csproj",
+  "projectFilePath": "C:\\Users\\migle\\RiderProjects\\DNP-Full-Todo-App\\TodoApp\\BlazorWASM\\BlazorWASM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\migle\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.8\\microsoft.aspnetcore.authorization.6.0.8.nupkg.sha512",
     "C:\\Users\\migle\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.8\\microsoft.aspnetcore.components.6.0.8.nupkg.sha512",
@@ -33,7 +33,10 @@
     "C:\\Users\\migle\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\migle\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\migle\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\migle\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.8\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.8.nupkg.sha512"
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.12\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\migle\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
   ],
   "logs": []
 }

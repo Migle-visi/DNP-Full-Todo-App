@@ -23,7 +23,7 @@ public class TodoEfcDao : ITodoDao
 
     public async Task<IEnumerable<Todo>> GetAsync(SearchTodoParametersDto searchParameters)
     {
-        IQueryable<Todo> query = context.Todos.AsQueryable();
+        IQueryable<Todo> query = context.Todos.Include(todo => todo.Owner).AsQueryable();
         if (!string.IsNullOrEmpty(searchParameters.Username))
         {
             query = query.Where(t => t.Owner.UserName.ToLower().Equals(searchParameters.Username.ToLower()));
@@ -45,15 +45,22 @@ public class TodoEfcDao : ITodoDao
 
     public async Task UpdateAsync(Todo todo)
     {
-        context.ChangeTracker.Clear();
         context.Todos.Update(todo);
         await context.SaveChangesAsync();
     }
 
     public async Task<Todo?> GetByIdAsync(int todoId)
     {
-        Todo? existing = await context.Todos.FindAsync(todoId);
-        return existing;
+        Todo? found = await context.Todos
+            .AsNoTracking().Include(todo => todo.Owner)
+            .SingleOrDefaultAsync(todo => todo.Id == todoId);
+        return found;
+    }
+    
+    public async Task<IEnumerable<Todo>> GetTodosByUserIdAsync(int id)
+    {
+        IEnumerable<Todo> list = await context.Todos.Include(todo => todo.Owner).Where(todo => todo.Owner.Id == id).ToListAsync();
+        return list;    
     }
 
     public async Task DeleteAsync(int id)

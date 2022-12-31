@@ -103,7 +103,23 @@ public class TodoHttpClient : ITodoService
         )!;
         return todo;
     }
+    
+    public async Task<IEnumerable<Todo>> GetPostsByUserIdAsync(int id)
+    {
+        HttpResponseMessage response = await client.GetAsync($"/todos/user/{id}");
+        string result = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
 
+        Console.WriteLine(result);
+        ICollection<Todo> todos = JsonSerializer.Deserialize<ICollection<Todo>>(result, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        return todos;
+    }
     public async Task DeleteAsync(int id)
     {
         HttpResponseMessage response = await client.DeleteAsync($"Todos/{id}");

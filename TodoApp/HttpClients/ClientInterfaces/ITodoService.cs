@@ -18,6 +18,8 @@ public interface ITodoService
     
     Task<TodoBasicDto> GetByIdAsync(int id);
 
+    Task<IEnumerable<Todo>> GetPostsByUserIdAsync(int id);
+
     Task DeleteAsync(int id);
 
 }
